@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="pos_multi_invoice_journal">
+            <field name="name">pos.config.multi.invoice.journal</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="pos_base.pos_config_base"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page" position="inside">
+                    <group>
+                        <field name="invoice_journal_ids" widget="many2many_tags"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
